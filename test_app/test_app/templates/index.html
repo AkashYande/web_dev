@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Basic HTML Page</title>
+</head>
+<body>
+	<h1>Welcome to My Basic HTML Page</h1>
+	<p>This is a paragraph of text.</p>
+    <h1>todos print</h1>
+    {% for todos in todos%}
+        <p>{{todos}}</p>
+    {%endfor%}
+
+    <form method="POST">
+        {{ template_form.hidden_tag()  }}
+        <P>
+            {{ template_form.todo.lable }}
+            {{ template_form.todo() }}
+        </p>
+        <p>{{ template_form.submit() }}</p>
+    </form>
+</body>
+</html>
